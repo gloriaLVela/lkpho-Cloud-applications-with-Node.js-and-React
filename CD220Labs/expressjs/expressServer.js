@@ -34,7 +34,7 @@ app.get("/fetchMonth2/:num", (req, res) => {
     let num = parseInt(req.params.num);
     const date = new Date(2000, num - 1, 1);
     // Use toLocaleString for a localized, human-readable name
-    const monthName = date.toLocaleString('default', { num: 'long' });
+    const monthName = date.toLocaleString('default', { month: 'long' });
     //console.log(monthName);
     res.send("monthName " + monthName);
 });
